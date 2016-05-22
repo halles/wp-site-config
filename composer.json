@@ -1,0 +1,21 @@
+{
+  "name": "halles/wpconfgen",
+  "description": "Automatically generate configurations for wordpress, nginx and php-fpm from file with values",
+  "homepage": "https://www.halles.cl/",
+  "authors": [
+    {
+      "name": "Matias Halles",
+      "email": "matias.halles@wikot.com"
+    }
+  ],
+  "require": {
+    "danack/configurator": "*"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+      "psr-0": {
+          "Acme": "src/"
+      }
+  }
+}

@@ -1,0 +1,198 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "cebed8f87b127ea1c5e0169c7ad54e86",
+    "content-hash": "32791832aac52bce40b124cd3c217e63",
+    "packages": [
+        {
+            "name": "danack/configurator",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Danack/Configurator.git",
+                "reference": "bcfc46c7171fbe4d4751dbbfd7211dc05c395983"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Danack/Configurator/zipball/bcfc46c7171fbe4d4751dbbfd7211dc05c395983",
+                "reference": "bcfc46c7171fbe4d4751dbbfd7211dc05c395983",
+                "shasum": ""
+            },
+            "require": {
+                "danack/console": "^2.6.1",
+                "php": "^5.4 || ^7.0",
+                "rdlowrey/auryn": "^1.0.2"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.4.0",
+                "phpunit/phpunit": "4.4.5",
+                "squizlabs/php_codesniffer": "^2.0.0",
+                "symfony/yaml": "^2.8.2"
+            },
+            "bin": [
+                "bin/configurate",
+                "bin/genenv",
+                "bin/fpmconv"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Configurator": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com"
+                }
+            ],
+            "description": "Generates config files from PHP, JSON and Yaml data files.",
+            "keywords": [
+                "config",
+                "configuration",
+                "environment",
+                "php",
+                "tool",
+                "utf-8"
+            ],
+            "time": "2016-03-18 18:31:17"
+        },
+        {
+            "name": "danack/console",
+            "version": "v2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Danack/Console.git",
+                "reference": "0224aa0b158117fc696d5d8c5238662e09137028"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Danack/Console/zipball/0224aa0b158117fc696d5d8c5238662e09137028",
+                "reference": "0224aa0b158117fc696d5d8c5238662e09137028",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "danack/auryn": "0.14.1",
+                "phpunit/phpunit": "4.2.6",
+                "psr/log": "~1.0",
+                "symfony/process": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Danack\\Console\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Danack",
+                    "email": "Danack@basereality.com"
+                }
+            ],
+            "description": "Refactored Symfony Console Component",
+            "homepage": "http://console.basereality.com/",
+            "keywords": [
+                "cli",
+                "console"
+            ],
+            "time": "2015-01-23 14:07:48"
+        },
+        {
+            "name": "rdlowrey/auryn",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rdlowrey/auryn.git",
+                "reference": "2e4240791162dfe073d59654d8dc06df0eb0b73f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rdlowrey/auryn/zipball/2e4240791162dfe073d59654d8dc06df0eb0b73f",
+                "reference": "2e4240791162dfe073d59654d8dc06df0eb0b73f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "fabpot/php-cs-fixer": "~1.9",
+                "phpunit/phpunit": "^4.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Auryn\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Ackroyd",
+                    "email": "Danack@basereality.com",
+                    "homepage": "http://www.basereality.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Levi Morrison",
+                    "email": "levim@php.net",
+                    "homepage": "http://morrisonlevi.github.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Daniel Lowrey",
+                    "email": "rdlowrey@gmail.com",
+                    "homepage": "https://github.com/rdlowrey",
+                    "role": "Creator / Main Developer"
+                }
+            ],
+            "description": "Auryn is a dependency injector for bootstrapping object-oriented PHP applications.",
+            "homepage": "https://github.com/rdlowrey/auryn",
+            "keywords": [
+                "dependency injection",
+                "dic",
+                "ioc"
+            ],
+            "time": "2016-03-14 20:10:19"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

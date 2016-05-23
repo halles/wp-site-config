@@ -25,7 +25,7 @@ define('WPLANG', ${'wp.language'});
  * Custom WordPress Install Path
  */
 
-define( 'WP_SITEURL', '${'site.scheme'}://${'site.url'}/wp' );
+define( 'WP_SITEURL', '${'site.scheme'}://${'site.url'}/${'site.directory.wordpress'}' );
 define( 'WP_HOME', '${'site.scheme'}://${'site.url'}' );
 
 define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/content' );
@@ -40,6 +40,12 @@ define( 'RELOCATE', true);
 define( 'AUTOMATIC_UPDATER_DISABLED', false );
 define( 'WP_AUTO_UPDATE_CORE', false );
 
+/**
+ * SSL
+ */
+
+define( 'FORCE_SSL_LOGIN', true );
+define( 'FORCE_SSL_ADMIN', true );
 
 /**
  * Debug Flags

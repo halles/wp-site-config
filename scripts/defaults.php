@@ -1,6 +1,6 @@
 <?php
 
-$env = array(
+$defaults = array(
 
     'domain'   => 'local.default.com',
     'domain.alternates' => 'default.com www.default.com',
@@ -15,6 +15,7 @@ $env = array(
     'site.directory.public' => 'www',
     'site.directory.wordpress' => 'wp',
     'site.url' => '',
+    'site.scheme' => 'https',
 
     'user' => 'foo',
     'group' => 'foo',
@@ -44,3 +45,25 @@ $env = array(
     'ssl.crt'      => 'server.crt',
 
 );
+
+
+if($env['site.ssl']){
+
+   if($env['site.port']!=443)
+        $env['site.url'] = $env['domain'].':'.$env['site.portssl'];
+    else
+        $env['site.url'] = $env['domain'];
+    
+}else{
+
+    if($env['site.port']!=80)
+        $env['site.url'] = $env['domain'].':'.$env['site.port'];
+    else
+        $env['site.url'] = $env['domain'];
+
+}
+
+$env['site.scheme'] = $env['site.ssl']?'https':'http';
+
+
+$env = array_merge($defaults, $env);

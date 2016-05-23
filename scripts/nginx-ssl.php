@@ -4,8 +4,19 @@ $env['site.scheme'] = $env['site.ssl']?'https':'http';
 
 if($env['site.ssl']){
     
-    if(!file_exists($env['ssl.directory']) || !is_dir($env['ssl.directory']) || !is_writable($env['ssl.directory']))
-        die('Directory for SSL does not exist: '.$env['ssl.directory']."\n");
+    if(!file_exists($env['ssl.directory'])){
+        if(!mkdir($env['ssl.directory'])){
+            die('Directory for SSL certificate could not be created: '.$env['ssl.directory']."\n");
+        }
+    }
+
+    if(!is_dir($env['ssl.directory'])){
+        die('Directory for SSL certificate is a file: '.$env['ssl.directory']."\n");
+    }
+
+    if(!is_writable($env['ssl.directory'])){
+        die('Directory for SSL in not writable: '.$env['ssl.directory']."\n");
+    }
 
     exec(sprintf('openssl genrsa -out %s/%s 1024',
         $env['ssl.directory'],

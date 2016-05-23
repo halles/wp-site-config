@@ -22,14 +22,4 @@ else
 	echo 'Production Work In Progress'
 fi
 
-# Convert the ini file to be in the PHP-FPM format
-#bin/fpmconv autogen/php.ini autogen/php.fpm.ini
-
-# Link the generated files to where they need to be on the system.
-# Not needed for example
-# sh autogen/addConfig.sh
-#echo "skipped running autogen/addConfig.sh as this is an example."
-
-#bin/genenv -p example/config.php example/envRequired.php autogen/appEnv.php $environment
-
 echo "Done. Generated files are in parent directory: ${DIR_BASE}"
